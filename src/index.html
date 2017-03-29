@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chat front-end</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container chat-container rounded">
+        <div class="row chat-title-row">
+            <h2 class="chat-title text-muted">Chatmandu</h2>
+        </div>
+        <div class="row">
+            <ul class="col conversation-list rounded-right">
+                <li class="minatiure">
+                    <img src="/images/avatar-01.png" class="minatiure__img" />
+                    <div class="minatiure__text">Maria K</div>
+                </li>
+                <li class="minatiure">
+                    <img src="/images/avatar-02.png" class="minatiure__img" />
+                    <div class="minatiure__text">Andrzej W</div>
+                </li>
+                <li class="minatiure">
+                    <img src="/images/avatar-04.png" class="minatiure__img" />
+                    <div class="minatiure__text">Bartek O</div>
+                </li>
+
+            </ul>
+            <div class="col-9">
+                <div class="conversation">
+                    <div class="conversation__display row">
+                        <ul class="conversation__message-list">
+                            <li class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mauris diam, molestie in diam vel, gravida viverra metus. </li>
+                            <li class="message self">Aenean lorem arcu, varius ac pharetra eget, pretium imperdiet ex. Ut quis enim maximus, dapibus ipsum id, rutrum sem. </li>
+                            <li class="message self">Maecenas lacinia libero sit amet massa malesuada, et molestie nibh varius. Suspendisse potenti. </li>
+                            <li class="message">Aenean lorem arcu, varius ac pharetra eget.</li>
+                            <li class="message">Sed dignissim ligula ut hendrerit sagittis.</li>
+                            <li class="message"> In vehicula auctor justo a tincidunt. Aliquam facilisis egestas nisi in interdum.</li>
+                        </ul>
+                    </div>
+                    <form class="conversation__input-row row input-group">
+                        <input type="text" class="conversation__input form-control" />
+                        <input type="submit" value="Send" class="conversation__send input-group-addon" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
