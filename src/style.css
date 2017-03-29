@@ -21,6 +21,9 @@
     list-style: none;
     margin-bottom: 0;
     padding: 0;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .minatiure {
     margin-bottom: 1px;
@@ -66,7 +69,10 @@
     height: 40px;
 }
 .conversation__input {
-
+    border-bottom: none;
+}
+.conversation__send {
+    border-bottom: none;
 }
 .conversation__message-list {
     height: 100%;
@@ -83,11 +89,13 @@
     padding: 15px 10px;
     width: 60%;
     background-color: #fff;
-    border: 1px solid #eee;
+    border: 1px solid #ddd;
     margin-bottom: 5px;
-    border-radius: 3px;
+    border-radius: 10px;
 }
 
-.message.self {
+.message--self {
     align-self: flex-end;
+    background-color: #b8ddfc;
+    border: 1px solid #0275d8;
 }
