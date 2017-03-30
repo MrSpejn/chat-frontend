@@ -26,7 +26,6 @@
     overflow-x: hidden;
 }
 .miniature {
-    margin-bottom: 1px;
     position: relative;
     width: 100%;
     height: 60px;
@@ -39,7 +38,7 @@
     content: '';
     height: 1px;
     position: absolute;
-    top: 100%;
+    bottom: 0;
     left: 10%;
     background-color: #eee;
 }
@@ -128,6 +127,9 @@
 .modal .btn[type="submit"] {
     width: 100px;
 }
+.miniature--active {
+    background-color: #dbfcdb;
+}
 .miniature--active::before {
     position: absolute;
     content: '';
@@ -136,4 +138,7 @@
     background-color: #5CB85C;
     height: 100%;
     width: 10px;
+}
+.miniature--active:not(:last-child)::after {
+    background-color: #5CB85C;
 }
