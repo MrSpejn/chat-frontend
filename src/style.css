@@ -1,5 +1,5 @@
 .chat-container {
-    margin-top: 20vh;
+    margin-top: 10vh;
     background-color: #F6F6F6;
     border: 1px solid #ddd;
 }
@@ -21,20 +21,20 @@
     list-style: none;
     margin-bottom: 0;
     padding: 0;
-    max-height: 500px;
+    max-height: 70vh;
     overflow-y: auto;
     overflow-x: hidden;
 }
-.minatiure {
+.miniature {
     margin-bottom: 1px;
     position: relative;
     width: 100%;
     height: 60px;
-    padding: 5px;
+    padding: 5px 0 5px 5px;
     display: flex;
     align-items: center;
 }
-.minatiure:not(:last-child)::after {
+.miniature:not(:last-child)::after {
     width: 80%;
     content: '';
     height: 1px;
@@ -43,23 +43,20 @@
     left: 10%;
     background-color: #eee;
 }
-.minatiure:hover {
-    background-color: #f8f8f8;
-    cursor: pointer;
-}
-.minatiure__img {
+
+.miniature__img {
     max-width: 50px;
     width: 50px;
     border-radius: 50%;
 
 }
-.minatiure__text {
+.miniature__name {
     width: 100%;
     box-sizing: border-box;
     padding-left: 20px;
 }
 .conversation {
-    height: 500px;
+    height: 70vh;
 }
 .conversation__display {
     height: calc(100% - 40px);
@@ -77,7 +74,7 @@
 .conversation__message-list {
     height: 100%;
     margin: 0;
-    padding: 0 40px;
+    padding: 40px 40px 0;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -85,6 +82,7 @@
     overflow: auto;
 }
 .message {
+    position: relative;
     min-height: min-content;
     padding: 15px 10px;
     width: 60%;
@@ -93,9 +91,49 @@
     margin-bottom: 5px;
     border-radius: 10px;
 }
+.message__info {
+    position: absolute;
+    top: 2px;
+    left: 80%;
+    font-size: 12px;
+    color: #888;
+}
+.message.message--self .message__info {
+    color: #0275d8;
+}
 
 .message--self {
     align-self: flex-end;
     background-color: #b8ddfc;
     border: 1px solid #0275d8;
+}
+
+.modal {
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+}
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+.fade.show {
+    opacity: 1;
+}
+.modal-content {
+    padding: 2em;
+    display: block;
+}
+.modal .btn[type="submit"] {
+    width: 100px;
+}
+.miniature--active::before {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: 0;
+    background-color: #5CB85C;
+    height: 100%;
+    width: 10px;
 }

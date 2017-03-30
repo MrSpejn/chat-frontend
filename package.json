@@ -1,12 +1,12 @@
 {
   "name": "chat-frontend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Front end part of a small chat",
+  "repository": "https://github.com/MrSpejn/chat-frontend.git",
+  "main": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "",
-    "start": "concurrently \"watchify -d ./src/javascript/main.js -o ./src/bundle.js\" \"http-server ./src -c0\""
+    "start": "concurrently \"watchify -d ./src/javascript/main.js -o ./src/bundle.js\" \"http-server ./src -p 3000 -c0\""
   },
   "author": "Tomek Jósiak",
   "devDependencies": {
